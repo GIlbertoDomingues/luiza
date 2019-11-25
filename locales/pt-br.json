@@ -1,0 +1,54 @@
+{
+  "links": {
+    "home": "Início",
+    "about": "Sobre",
+    "form": "O que você busca",
+    "reason": "Motivos",
+    "ebook": "E-book",
+    "faq": "Perguntas frequentes",
+    "blog": "Blog"
+  },
+  "banners": {
+    "banner": {
+      "title": "Resolva<br>seus conflitos",
+      "description": "Resolva suas disputas online com efeitos legais reconhecidos pela legislação brasileira."
+    }
+  },
+  "about": {
+    "title": "Sobre nós",
+    "about01": "Buscar a Justiça requer empenho para lidar com todas as dificuldades do procedimento e ainda ter que esperar anos até a sentença.<br><br>Os sentimentos de insegurança e preocupação persistem por anos.<br><br>Com o propósito de transformar a busca pela Justiça em uma jornada prazerosa, nós oferecemos vantagens preciosas que vão fazer você se sentir seguro.<br><br>Como vamos fazer isso?",
+    "about02": "Além da celeridade, confidencialidade e acessibilidade, garantimos que sua experiência será excepcional pela transparência dos nossos procedimentos.<br><br>Vai ficar claro para você em que fase o processo arbitral está, se falta algo a ser feito, quais são os próximos passos.<br><br>Você vai se sentir seguro e confiante.<br><br>Nosso propósito é que a sua jornada em busca pela Justiça seja agradável."
+  },
+  "features": {
+    "feature01": {
+      "title": "Implantes",
+      "text": "Integramos um pino de Titânio biocompatível na região que precisa ser tratada através do uso de uma coroa, que devolve as funções naturais e estética para sua arcada dentária."
+    },
+    "feature02": {
+      "title": "Levantamento de mordida",
+      "text": "A ausência de elementos dentais, mau posicionamento, respiração bucal e características das estruturas ósseas gera irregularização na mordida. Através de overlay, devolvemos a você a altura e alinhamento correto da mordida."
+    },
+    "feature03": {
+      "title": "Gengivoplastia",
+      "text": "Através de micro cirurgia, redefinimos as formas e altura das suas gengivas, como arcos gengivais e contorno dos dentes. O resultado estético é incrível."
+    }
+  },
+  "carosuel-content": "Veja alguns dos casos tratados",
+  "bar-action": {
+    "title": "Tenha você também um sorriso incrível.",
+    "title2": "Não perca mais tempo para tratar o seu sorriso!",
+    "button": "MARQUE UMA CONSULTA",
+    "text-whats": "Olá, gostaria de marcar um horário para melhorar meu sorriso :)"
+  },
+  "doctor": {
+    "occupation": "Cirurgião dentista • CRO 96205",
+    "title": "A qualidade inicial é a mesma das famosas facetas de porcelana, muito utilizadas em Hollywood.",
+    "text01": "Um sorriso bonito é bem mais que dentes brancos e alinhados. Para isso eles precisam ser proporcionais e harmônicos, requisitos alcançados através da razão áurea que é conhecida também pela Seqüência de Fibonacci.",
+    "text02": "Porém com a vantagem de serem realizadas em uma única sessão de no <b>máximo 4 horas</b>. Em sua maioria não é necessário desgastar os dentes, além de possibilitar qualquer tipo de ajuste no pós-operatório."
+  },
+  "instagram": "Siga-nos em nosso Instagram",
+  "footer":{
+    "contact": "Contato",
+    "copy": "Todos os direitos reservados"
+  }
+}

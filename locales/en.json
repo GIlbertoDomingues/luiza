@@ -1,0 +1,58 @@
+{
+  "links": {
+    "home": "Home",
+    "specialty": "Specialty",
+    "beforeAfter": "Before and After",
+    "about": "About",
+    "contact": "Make an appointment"
+  },
+  "banners": {
+    "banner01": {
+      "title": "Remodel your life",
+      "description": "A complete dental treatment that makes all the difference to your health and self esteem. Make a budget with us!"
+    },
+    "banner02": {
+      "title": "Quick treatment",
+      "description": "Get your entire dental arch remodeled in just 4 hours. The treatment is completely objective and quick to give you the best experience."
+    },
+    "banner03": {
+      "title": "Make your budget now",
+      "description": "Prices set according to your need. Contact us right now and let's talk"
+    }
+  },
+  "about": {
+    "title": "Make your treatment with one of the most renowned dental market and redefine your smile in just 4 hours"
+  },
+  "features": {
+    "feature01": {
+      "title": "Implants",
+      "text": "We have integrated a biocompatible Titanium pin into the region that needs to be treated through the use of a crown, which returns the natural and aesthetic functions to your dental arch."
+    },
+    "feature02": {
+      "title": "Bite lift",
+      "text": "The absence of dental elements, poor positioning, mouth breathing and bone structure characteristics leads to bite irregularities. Through overlay, we give you the correct bite height and alignment."
+    },
+    "feature03": {
+      "title": "Gingivoplasty",
+      "text": "Through micro surgery, we redefined the shape and height of your gums, such as gingival arches and tooth contours. The aesthetic result is amazing."
+    }
+  },
+  "carosuel-content": "See some cases treated",
+  "bar-action": {
+    "title": "Have you also an amazing smile.",
+    "title2": "Do not waste more time to treat your smile!",
+    "button": "Make a budget with us",
+    "text-whats": "Hello, I would like to make an appointment to improve my smile :)"
+  },
+  "doctor": {
+    "occupation": "Dental surgeon • CRO 96205",
+    "title": "The initial quality is the same as the famous porcelain veneers widely used in Hollywood.",
+    "text01": "A beautiful smile is much more than straight white teeth. For this they need to be proportional and harmonic, requirements achieved through the golden ratio which is also known as the Fibonacci Sequence.Um sorriso bonito é bem mais que dentes brancos e alinhados. Para isso eles precisam ser proporcionais e harmônicos, requisitos alcançados através da razão áurea que é conhecida também pela Seqüência de Fibonacci.",
+    "text02": "But with the advantage of being performed in a single session of a <b>maximum of 4 hours</b>. Most of the teeth do not have to be worn, as well as allowing any type of postoperative adjustment."
+  },
+  "instagram": "Follow us on our Instagram",
+  "footer":{
+    "contact": "Contact",
+    "copy": "All rights reserved"
+  }
+}
