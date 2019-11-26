@@ -17,8 +17,8 @@
           <h2 class="title" v-html="titleMobile" />
           <h5 class="subtitle" v-text="subtitle" />
         </div>
-        <b-form v-if="show" method="POST" action="https://formspree.io/mjvkvegq" @submit="onSubmit">
-          <input type="hidden" name="_subject" value="Novo contato!">
+        <b-form v-if="show" method="POST" action="https://formspree.io/mjvkvegq">
+          <input type="hidden" name="_subject" value="Novo contato pelo site!">
           <input type="hidden" name="_language" value="pt">
           <b-form-group label="Escolha a opção abaixo">
             <b-form-radio-group
@@ -26,7 +26,7 @@
               v-model="selected"
               :options="options"
               buttons
-              name="radios-btn-default"
+              name="Escolha a opção abaixo"
             />
           </b-form-group>
 
@@ -35,6 +35,7 @@
               id="name"
               v-model="form.name"
               required
+              name="Nome"
               placeholder="Digite seu nome"
             />
           </b-form-group>
@@ -43,6 +44,7 @@
             <b-form-input
               id="email"
               v-model="form.email"
+              name="Email"
               type="email"
               required
               placeholder="Digite seu email"
@@ -53,6 +55,7 @@
             <b-form-input
               id="phone"
               v-model="form.phone"
+              name="Telefone"
               type="text"
               required
               placeholder=" 00.00000.0000"
@@ -60,8 +63,8 @@
           </b-form-group>
 
           <b-form-group id="input-group-sms">
-            <b-form-checkbox-group id="checkboxes-sms" v-model="form.checked">
-              <b-form-checkbox value="sms">
+            <b-form-checkbox-group id="checkboxes-sms" v-model="form.checked" name="Receber sms/e-mail">
+              <b-form-checkbox value="sim">
                 Eu concordo em receber sms/e-mail
               </b-form-checkbox>
             </b-form-checkbox-group>
@@ -69,7 +72,8 @@
 
           <b-form-textarea
             id="textarea"
-            v-model="form.menssage"
+            v-model="form.message"
+            name="Mensagem"
             placeholder="Escreva-nos uma mensagem"
             rows="2"
           />
@@ -96,13 +100,13 @@ export default {
         email: '',
         name: '',
         phone: '',
-        menssage: ''
+        message: ''
       },
       show: true,
       selected: 'conflito',
       options: [
-        { text: 'Cadastrar conflito', value: 'conflito' },
-        { text: 'Ser árbrito', value: 'arbrito' }
+        { text: 'Cadastrar conflito', value: 'Cadastrar conflito' },
+        { text: 'Ser árbrito', value: 'Ser árbrito' }
       ]
     }
   },
@@ -118,7 +122,7 @@ export default {
       this.form.name = ''
       this.form.email = ''
       this.form.phone = ''
-      this.form.menssage = ''
+      this.form.message = ''
       this.show = false
       this.$nextTick(() => {
         this.show = true
@@ -332,6 +336,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
 
         &.active {
           border: solid 1px $primary;

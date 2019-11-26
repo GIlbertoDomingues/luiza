@@ -1,11 +1,11 @@
 <template>
   <div>
     <a v-if="!isMobile" target="_blank" :href="`https://api.whatsapp.com/send?phone=${phone}&text=${$t('bar-action.text-whats')}`" class="button-whats">
-      <img :src="require('@/assets/images/icons/icon-whatsapp.svg')" alt="WhatsApp Dr. Normando Scarabotto">
+      <img :src="require('@/assets/images/icons/icon-whatsapp.svg')" alt="WhatsApp Dr. Airb-ON">
     </a>
 
     <a v-if="isMobile" target="_blank" :href="`https://api.whatsapp.com/send?phone=${phone}&text=${$t('bar-action.text-whats')}`" class="button-whats">
-      <img :src="require('@/assets/images/icons/icon-whatsapp-white.svg')" alt="WhatsApp Dr. Normando Scarabotto">
+      <img :src="require('@/assets/images/icons/icon-whatsapp-white.svg')" alt="WhatsApp Dr. Airb-ON">
       {{ $t('bar-action.button') }}
     </a>
   </div>
