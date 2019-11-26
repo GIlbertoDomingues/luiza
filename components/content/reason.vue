@@ -94,7 +94,7 @@ export default {
 
   .wrapper-tranform {
     margin-top: 90px;
-    height: 750px;
+    height: 670px;
     position: relative;
 
     .img-transform {
@@ -104,7 +104,7 @@ export default {
 
     .wrap-transform {
       width: 490px;
-      height: 670px;
+      height: 540px;
       background-color: $teal;
       position: relative;
       margin-left: -18px;
@@ -117,7 +117,7 @@ export default {
         text-align: right;
         color: $white;
         padding-right: 100px;
-        padding-top: 120px;
+        padding-top: 100px;
       }
 
       .box-transform-bottom {

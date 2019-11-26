@@ -20,11 +20,11 @@
               <span :class="{active : language === 'en'}">English</span>
             </div>
 
-            <a target="_black" href="https://www.facebook.com/" class="social">
-              <img :src="require('@/assets/images/icons/facebook.svg')" alt="Facebook Airb-ON">
+            <a target="_black" href="https://www.instagram.com/arbi.on/" class="social">
+              <img :src="require('@/assets/images/instagram-header.svg')" alt="Instagram Airb-ON">
             </a>
-            <a target="_black" href="https://www.youtube.com/" class="social">
-              <img :src="require('@/assets/images/youtube.svg')" height="23" alt="Linkedin Airb-ON">
+            <a target="_black" href="https://www.linkedin.com/company/arbi-on/" class="social">
+              <img :src="require('@/assets/images/linkedin-header.svg')" alt="Linkedin Airb-ON">
             </a>
           </div>
         </div>

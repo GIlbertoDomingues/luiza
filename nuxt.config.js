@@ -7,7 +7,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
       { mobileAppIOS: true },
-      { hid: 'description', name: 'description', content: 'Resolva suas disputas online com efeitos legais reconhecidos pela legislação brasileira.' },
+      { hid: 'description', name: 'description', content: 'Arbitragem online: rápido, seguro e acessível' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'og:locale', content: 'pt_BR' },
       { name: 'og:type', content: 'website' },
@@ -36,7 +36,7 @@ export default {
     theme_color: '#e76243',
     background_color: '#fff',
     display: 'standalone',
-    description: 'Resolva suas disputas online com efeitos legais reconhecidos pela legislação brasileira.',
+    description: 'Arbitragem online: rápido, seguro e acessível',
     icons: [
       {
         'src': '/icon.png',

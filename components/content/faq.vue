@@ -193,6 +193,10 @@
   border: none;
   border-bottom: 1px solid $border;
   border-radius: 0;
+
+  header {
+    z-index: 10;
+  }
 }
 
 .card-header {
