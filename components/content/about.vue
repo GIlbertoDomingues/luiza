@@ -9,16 +9,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="offset-md-1 col-sm-4 animated">
-          <div class="wrap-features-content">
-            <p class="text" v-html="$t('about.about01')" />
+        <div class="wrap-text" :class="{show : showMore}">
+          <div class="offset-md-1 col-sm-4 animated">
+            <div class="wrap-features-content">
+              <p class="text" v-html="$t('about.about01')" />
+            </div>
+          </div>
+          <div class="offset-md-1 col-sm-4 animated">
+            <div class="wrap-features-content">
+              <p class="text" v-html="$t('about.about02')" />
+            </div>
           </div>
         </div>
-        <div class="offset-md-1 col-sm-4 animated">
-          <div class="wrap-features-content">
-            <p class="text" v-html="$t('about.about02')" />
-          </div>
-        </div>
+
+        <button v-if="isMobile" class="btn btn-link" @click.prevent="showMore = !showMore">
+          {{ showMore ? 'Fechar' : 'Ler mais' }}
+        </button>
       </div>
     </div>
   </section>
@@ -27,13 +33,27 @@
 <script>
 export default {
 
+  data: () => {
+    return {
+      showMore: false,
+      isMobile: false,
+      window: {
+        width: 0
+      }
+    }
+  },
+
   created () {
     // eslint-disable-next-line nuxt/no-globals-in-created
     window.addEventListener('scroll', this.handleSCroll)
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
   },
 
   destroyed () {
     window.removeEventListener('scroll', this.handleSCroll)
+    window.removeEventListener('resize', this.handleResize)
   },
 
   methods: {
@@ -46,6 +66,14 @@ export default {
       if (top < height && bottom > 0 && !header.className.includes('fadeInUp')) {
         header.classList.remove('hidden')
         header.classList.add('fadeInUp')
+      }
+    },
+
+    handleResize () {
+      this.window.width = window.innerWidth
+
+      if (this.window.width <= 768) {
+        this.isMobile = true
       }
     }
   }
@@ -74,11 +102,22 @@ export default {
     width: 60%;
 
     @media (max-width: 768px) {
-      font-size: 32px;
-      line-height: 38px;
+      font-size: 38px;
+      line-height: 70px;
       width: 100%;
-      text-align: center;
     }
+  }
+}
+
+.wrap-text {
+  height: 110px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 3000ms ease-in ;
+
+  &.show {
+    animation: fadeIn 3000ms ease-out;
+    height: auto;
   }
 }
 

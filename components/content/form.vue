@@ -7,12 +7,16 @@
         <div class="wrap-image-form">
           <span class="block-form-top" />
           <picture>
-            <source :srcset="require('@/assets/images/banner-form.jpg')" media="(max-width: 768px)">
+            <source :srcset="require('@/assets/images/banner-form-mobile.jpg')" media="(max-width: 768px)">
             <img :src="require('@/assets/images/banner-form.jpg')" alt="Cadastre-se no formulário">
           </picture>
         </div>
       </div>
       <div class="col-sm-6 wrap-form">
+        <div class="wrap-title-mobile">
+          <h2 class="title" v-html="titleMobile" />
+          <h5 class="subtitle" v-text="subtitle" />
+        </div>
         <b-form v-if="show" @submit="onSubmit" @reset="onReset">
           <b-form-group label="Escolha a opção abaixo">
             <b-form-radio-group
@@ -84,6 +88,7 @@ export default {
   data: () => {
     return {
       title: 'O que você<br>busca?',
+      titleMobile: 'O que você busca?',
       subtitle: 'Cadastre-se no formulário.',
       form: {
         email: '',
@@ -127,24 +132,40 @@ export default {
 .wrapper-form {
   margin-top: 140px;
 
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+
   .title {
     font-size: 48px;
     line-height: 50px;
     font-weight: 700;
     color: #24241e;
     text-align: right;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .subtitle {
     font-size: 20px;
     color: $black;
     text-align: right;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .wrap-image-form {
     position: relative;
     min-height: 700px;
     height: auto;
+
+    @media (max-width: 768px) {
+      min-height: 360px;
+    }
 
     .block-form-top {
       width: 210px;
@@ -155,6 +176,12 @@ export default {
       right: -15px;
       z-index: 10;
 
+      @media (max-width: 768px) {
+        width: 170px;
+        height: 170px;
+        top: 0;
+      }
+
       &::after {
         content: '';
         width: 105px;
@@ -164,6 +191,11 @@ export default {
         top: 0;
         right: 0;
         z-index: 11;
+
+        @media (max-width: 768px) {
+          width: 80px;
+          height: 80px;
+        }
       }
 
       &::before {
@@ -175,6 +207,12 @@ export default {
         top: 0;
         left: -70px;
         z-index: 11;
+
+        @media (max-width: 768px) {
+          width: 50px;
+          height: 50px;
+          left: -50px;
+        }
       }
     }
 
@@ -182,6 +220,12 @@ export default {
       position: absolute;
       left: -30px;
       top: 140px;
+
+      @media (max-width: 768px) {
+        left: -15px;
+        top: 50px;
+        width: 100vw;
+      }
     }
   }
 
@@ -189,8 +233,42 @@ export default {
     height: 760px;
     background-color: $light-grey;
 
+    @media (max-width: 768px) {
+      min-height: 760px;
+    }
+
+    .wrap-title-mobile {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+
+        .title {
+          font-size: 38px;
+          line-height: 50px;
+          font-weight: 700;
+          letter-spacing: -1.58px;
+          color: $black;
+          margin-top: 20px;
+          text-align: left;
+          display: block;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          color: $black;
+          text-align: left;
+          display: block;
+        }
+      }
+    }
+
     form {
       padding: 70px;
+
+      @media (max-width: 768px) {
+        padding: 30px 0 50px;
+      }
 
       .col-form-label,
       label {

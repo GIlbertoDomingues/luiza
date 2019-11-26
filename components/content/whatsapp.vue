@@ -52,6 +52,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/sass/colors.scss";
+
 .button-whats {
   position: fixed;
   top: 25%;
@@ -63,9 +65,9 @@ export default {
     bottom: 0;
     top: auto;
     width: 100%;
-    height: 50px;
-    color: #fff;
-    background: #334a87;
+    height: 60px;
+    color: $white;
+    background: $primary;
     display: flex;
     align-items: center;
     justify-content: center;

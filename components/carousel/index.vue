@@ -3,7 +3,7 @@
     <div class="wrapper-banner">
       <div class="image-banner">
         <picture>
-          <source :srcset="require('@/assets/images/banner.jpg')" media="(max-width: 768px)">
+          <source :srcset="require('@/assets/images/banner-mobile.jpg')" media="(max-width: 768px)">
           <img :src="require('@/assets/images/banner.jpg')" alt="Resolva seus conflitos">
         </picture>
       </div>
@@ -38,11 +38,14 @@
     width: 100%;
     z-index: 9;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56) 1%, rgba(0, 0, 0, 0));
+
+    @media (max-width: 768px) {
+      height: calc(100vh - 60px);
+    }
   }
 
-  @media (max-width: 767px) {
-    min-height: 840px;
-    height: auto;
+  @media (max-width: 768px) {
+    height: calc(100vh - 60px);
   }
 
   .image-banner {
@@ -53,6 +56,10 @@
       top: 0;
       left: 0;
       object-fit: cover;
+
+      @media (max-width: 768px) {
+        height: calc(100vh - 60px);
+      }
     }
   }
 }
@@ -72,10 +79,12 @@
 
   @media (max-width: 767px) {
     left: 0;
-    top: 300px;
+    top: 170px;
     width: 100%;
     padding-left: 0;
     padding-top: 35px;
+    min-height: 300px;
+    background-color: transparent;
   }
 
   h1 {
@@ -86,11 +95,12 @@
     margin: 160px 0 40px;
     animation: fadeIn 3000ms ease ;
 
-    @media (max-width: 767px) {
-      font-size: 32px;
+    @media (max-width: 768px) {
+      font-size: 50px;
+      line-height: 50px;
       width: 100%;
       margin-top: 10px;
-      padding-left: 15px;
+      margin-bottom: 35px;
       animation: slideInUp 700ms linear ;
     }
   }
@@ -108,6 +118,10 @@
     position: absolute;
     top: 0;
     left: 78px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     &::before {
       content: '';
@@ -127,6 +141,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     &::before {
       content: '';
