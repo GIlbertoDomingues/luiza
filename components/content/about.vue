@@ -87,7 +87,7 @@ export default {
   .text {
     font-size: 16px;
     line-height: 28px;
-    color: #8f8f8f;
+    color: $black;
   }
 }
 

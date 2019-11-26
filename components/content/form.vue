@@ -1,5 +1,5 @@
 <template>
-  <div class="container wrapper-form">
+  <div id="formulario" class="container wrapper-form">
     <div class="row">
       <div class="col-sm-6">
         <h2 class="title" v-html="title" />
@@ -159,7 +159,7 @@ export default {
         content: '';
         width: 105px;
         height: 105px;
-        background-color: $wheat;
+        background-color: $yellow;
         position: absolute;
         top: 0;
         right: 0;

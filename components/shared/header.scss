@@ -91,7 +91,7 @@ header {
       }
 
       .vue-js-switch .v-switch-core .v-switch-button {
-        background-color: $wheat;
+        background-color: $yellow;
         width: 11px !important;
         height: 11px !important;
       }
@@ -139,7 +139,7 @@ header {
 
     &:hover,
     &.is-active {
-      border-top: solid 3px $wheat;
+      border-top: solid 3px $yellow;
       transition: ease 200ms;
       text-decoration: none;;
     }
@@ -247,7 +247,7 @@ header {
       transition: ease 200ms;
 
       &:hover {
-        color: $wheat;
+        color: $yellow;
         transition: ease 200ms;
       }
 

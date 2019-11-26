@@ -1,7 +1,9 @@
 <template>
-  <div class="container wrapper-reason">
+  <div id="motivos" class="container wrapper-reason">
     <div class="row">
-      <h2>Motivos para nos escolher</h2>
+      <h2 class="title">
+        Motivos para nos escolher
+      </h2>
     </div>
     <div class="row">
       <div class="col-md-4">
@@ -35,6 +37,20 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
       </div>
     </div>
+
+    <div class="row wrapper-tranform">
+      <div class="col-sm-6">
+        <img class="img-transform" :src="require('@/assets/images/vamos-transformar.jpg')" alt="Vamos transformar">
+      </div>
+      <div class="col-sm-6">
+        <div class="wrap-transform">
+          <h2 class="title-transform">
+            Vamos<br>transformar a<br>busca pela<br>Justiça em uma<br>jornada<br>agradável
+          </h2>
+          <span class="box-transform-bottom" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -50,7 +66,7 @@ export default {
 .wrapper-reason {
   margin-top: 120px;
 
-  h2 {
+  .title {
     font-size: 48px;
     font-weight: 700;
     color: $black;
@@ -73,6 +89,55 @@ export default {
     color: $black;
     height: 120px;
     margin-bottom: 15px;
+  }
+
+  .wrapper-tranform {
+    margin-top: 90px;
+    height: 750px;
+    position: relative;
+
+    .img-transform {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .wrap-transform {
+      width: 490px;
+      height: 670px;
+      background-color: $teal;
+      position: relative;
+      margin-left: -18px;
+
+      .title-transform {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.04;
+        letter-spacing: -2px;
+        text-align: right;
+        color: $white;
+        padding-right: 100px;
+        padding-top: 120px;
+      }
+
+      .box-transform-bottom {
+        background-color: $yellow;
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &:before {
+          content: '';
+          background-color: $primary;
+          width: 70px;
+          height: 70px;
+          position: absolute;
+          bottom: 0;
+          right: -70px;
+        }
+      }
+    }
   }
 }
 </style>

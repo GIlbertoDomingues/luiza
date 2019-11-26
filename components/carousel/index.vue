@@ -104,7 +104,7 @@
   .block-banner-top {
     width: 78px;
     height: 156px;
-    background: $wheat;
+    background: $yellow;
     position: absolute;
     top: 0;
     left: 78px;
@@ -116,7 +116,7 @@
       left: -78px;
       width: 156px;
       height: 78px;
-      background: $wheat;
+      background: $yellow;
     }
   }
 
@@ -135,7 +135,7 @@
       right: -70px;
       width: 70px;
       height: 70px;
-      background: $wheat;
+      background: $yellow;
     }
   }
 }

@@ -177,7 +177,7 @@ export default {
     }
 
     .vue-js-switch .v-switch-core .v-switch-button {
-      background-color: $wheat;
+      background-color: $yellow;
       width: 11px !important;
       height: 11px !important;
     }
