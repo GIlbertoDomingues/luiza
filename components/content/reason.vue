@@ -9,32 +9,32 @@
       <div class="col-md-4">
         <img :src="require('@/assets/images/motivos/resultado_rapido.svg')" alt="Resultado rápido">
         <h3>Resultado rápido</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
+        <p>O procedimento online e sem burocracia acelera a resolução pelo árbitro.</p>
       </div>
       <div class="col-md-4">
         <img :src="require('@/assets/images/motivos/profissionais_experientes.svg')" alt="Profissionais experientes">
         <h3>Profissionais experientes</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
+        <p>Conhecedores do assunto em debate produzem a melhor sentença.</p>
       </div>
       <div class="col-md-4">
         <img :src="require('@/assets/images/motivos/confidencialidade.svg')" alt="Confidencialidade">
         <h3>Confidencialidade</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
+        <p>Os processos e as decisões são confidenciais.</p>
       </div>
       <div class="col-md-4">
-        <img :src="require('@/assets/images/motivos/resultado_rapido.svg')" alt="Resultado rápido">
-        <h3>Preço junto</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
-      </div>
-      <div class="col-md-4">
-        <img :src="require('@/assets/images/motivos/preco_justo.svg')" alt="Preço justo">
-        <h3>Preço junto</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
+        <img :src="require('@/assets/images/motivos/resultado_rapido.svg')" alt="Preço acessível">
+        <h3>Preço acessível</h3>
+        <p>Custos da câmara reduzidos por ser online.</p>
       </div>
       <div class="col-md-4">
         <img :src="require('@/assets/images/motivos/acessivel.svg')" alt="Acessível">
-        <h3>Acessível</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus distinctio, voluptatum facilis.</p>
+        <h3>Prático</h3>
+        <p>Onde você estiver e sem obrigações desnecessárias.</p>
+      </div>
+      <div class="col-md-4">
+        <img :src="require('@/assets/images/motivos/automatizado.svg')" alt="Automatizado">
+        <h3>Automatizado</h3>
+        <p>Aumenta a celeridade e diminui os custos administrativos.</p>
       </div>
     </div>
 
