@@ -45,7 +45,8 @@
       <div class="col-sm-6">
         <div class="wrap-transform">
           <h2 class="title-transform">
-            Vamos<br>transformar a<br>busca pela<br>Justiça em uma<br>jornada<br>agradável
+            Vamos<br>te dar acesso<br>a uma justiça<br>eficiente
+            <!-- Vamos<br>transformar a<br>busca pela<br>Justiça em uma<br>jornada<br>agradável -->
           </h2>
           <span class="box-transform-bottom" />
         </div>

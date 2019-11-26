@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div id="ebook" class="container-fluid">
     <div class="row">
       <div class="wrapper-ebook">
         <span class="block-ebook-left" />

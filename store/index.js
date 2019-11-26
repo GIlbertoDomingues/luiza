@@ -1,7 +1,7 @@
 export const state = () => ({
   isLoading: false,
   language: false,
-  phone: '5511958435970',
+  phone: '5541991617090',
   locales: ['en', 'pt-br'],
   locale: 'pt-br'
 })
