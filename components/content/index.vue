@@ -2,6 +2,7 @@
   <div>
     <l-about />
     <l-form />
+    <l-reason />
   </div>
 </template>
 
@@ -9,7 +10,8 @@
 export default {
   components: {
     LAbout: () => import('@/components/content/about.vue'),
-    LForm: () => import('@/components/content/form.vue')
+    LForm: () => import('@/components/content/form.vue'),
+    LReason: () => import('@/components/content/reason.vue')
   },
 
   data () {

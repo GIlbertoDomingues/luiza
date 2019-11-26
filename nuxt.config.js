@@ -63,8 +63,8 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    ['@nuxtjs/google-analytics', { id: 'UA-152074239-1' }]
+    '@nuxtjs/pwa'
+    // ['@nuxtjs/google-analytics', { id: 'UA-152074239-1' }]
   ],
 
   router: {
