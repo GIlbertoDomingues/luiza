@@ -17,7 +17,9 @@
           <h2 class="title" v-html="titleMobile" />
           <h5 class="subtitle" v-text="subtitle" />
         </div>
-        <b-form v-if="show" @submit="onSubmit" @reset="onReset">
+        <b-form v-if="show" method="POST" action="https://formspree.io/mjvkvegq" @submit="onSubmit">
+          <input type="hidden" name="_subject" value="Novo contato!">
+          <input type="hidden" name="_language" value="pt">
           <b-form-group label="Escolha a opção abaixo">
             <b-form-radio-group
               id="btn-radios"

@@ -8,8 +8,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="wrap-text" :class="{show : showMore}">
+      <div class="wrap-text" :class="{show : showMore}">
+        <div class="row">
           <div class="offset-md-1 col-sm-4 animated">
             <div class="wrap-features-content">
               <p class="text" v-html="$t('about.about01')" />
@@ -21,11 +21,10 @@
             </div>
           </div>
         </div>
-
-        <button v-if="isMobile" class="btn btn-link" @click.prevent="showMore = !showMore">
-          {{ showMore ? 'Fechar' : 'Ler mais' }}
-        </button>
       </div>
+      <button v-if="isMobile" class="btn btn-link" @click.prevent="showMore = !showMore">
+        {{ showMore ? 'Fechar' : 'Ler mais' }}
+      </button>
     </div>
   </section>
 </template>
@@ -109,15 +108,22 @@ export default {
   }
 }
 
-.wrap-text {
-  height: 110px;
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 3000ms ease-in ;
+@media (max-width: 768px) {
+  .btn {
+    padding-left: 0;
+    margin-top: 15px;
+  }
 
-  &.show {
-    animation: fadeIn 3000ms ease-out;
-    height: auto;
+  .wrap-text {
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 3000ms ease-in ;
+
+    &.show {
+      animation: fadeIn 3000ms ease-out;
+      height: auto;
+    }
   }
 }
 
