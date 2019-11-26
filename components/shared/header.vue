@@ -57,9 +57,10 @@
 
     <!-- Moble -->
     <div class="header-mobile">
-      <div class="wrap-header-mobile">
+      <div class="wrap-header-mobile" :class="{ 'show-nav' : active_mobile }">
         <a href="#" class="logo">
-          <img :src="require('@/assets/images/logotipo.svg')" alt="Logo Airb-ON">
+          <img v-if="active_mobile" :src="require('@/assets/images/logotipo-white.svg')" alt="Logo Airb-ON">
+          <img v-else :src="require('@/assets/images/logotipo.svg')" alt="Logo Airb-ON">
         </a>
         <button class="btn-mobile" @click.prevent="toggleNavMobile">
           <img class="nav-icon" :class="{ out : !active_mobile }" :src="require('@/assets/images/icons/nav.svg')">
