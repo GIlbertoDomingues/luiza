@@ -48,9 +48,9 @@
           <a href="#faq" class="scrollactive-item">
             {{ $t('links.faq') }}
           </a>
-          <a href="#blog" class="scrollactive-item">
+          <!-- <a href="#blog" class="scrollactive-item">
             {{ $t('links.blog') }}
-          </a>
+          </a> -->
         </scrollactive>
       </div>
     </div>
@@ -87,9 +87,9 @@
           <a href="#faq" class="scrollactive-item">
             {{ $t('links.faq') }}
           </a>
-          <a href="#blog" class="scrollactive-item">
+          <!-- <a href="#blog" class="scrollactive-item">
             {{ $t('links.blog') }}
-          </a>
+          </a> -->
         </scrollactive>
       </transition>
     </div>

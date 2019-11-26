@@ -4,6 +4,7 @@
     <l-form />
     <l-reason />
     <l-ebook />
+    <l-faq />
   </div>
 </template>
 
@@ -13,7 +14,8 @@ export default {
     LAbout: () => import('@/components/content/about.vue'),
     LForm: () => import('@/components/content/form.vue'),
     LReason: () => import('@/components/content/reason.vue'),
-    LEbook: () => import('@/components/content/ebook.vue')
+    LEbook: () => import('@/components/content/ebook.vue'),
+    LFaq: () => import('@/components/content/faq.vue')
   },
 
   data () {
