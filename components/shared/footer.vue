@@ -91,11 +91,12 @@ export default {
     right: 0;
     width: 50%;
     height: 100%;
+
+    @media (max-width: 768px ) { display: none; }
   }
 
   @media (max-width: 768px ) {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-top: 30px;
   }
 
   .logo-footer {
@@ -107,6 +108,13 @@ export default {
     color: $black;
     width: 190px;
     display: block;
+
+    @media (max-width: 768px ) {
+      margin: 10px auto;
+      text-align: left;
+      width: 100%;
+    }
+
   }
 }
 
@@ -119,20 +127,6 @@ export default {
   margin-top: 50px;
 }
 
-.copy {
-  font-size: 14px;
-  line-height: 1.71;
-  text-align: center;
-  color: #8f8f8f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0;
-  width: 100%;
-  background: white;
-  position: relative;
-}
-
 .wrap-infos-footer{
   background-color: $white;
 
@@ -140,7 +134,7 @@ export default {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 
   }
 
@@ -180,7 +174,9 @@ export default {
     }
 
     @media (max-width: 768px ) {
-      display: none;
+      margin-bottom: 50px;
+      display: inline-block;
+      transition: ease 200ms;
     }
   }
 }
@@ -191,6 +187,15 @@ export default {
   padding-top: 120px;
   height: auto;
   padding-bottom: 120px;
+
+  address {
+    margin: 0;
+  }
+
+  @media (max-width: 768px ) {
+    padding: 15px;
+    text-align: left;
+  }
 
   a {
     color: $white;
@@ -204,59 +209,21 @@ export default {
   color: $white;
 }
 
-.wrap-footer-mobile {
-  flex-flow: column;
+.copy {
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  color: #8f8f8f;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  width: 100%;
+  background: white;
+  position: relative;
 
-  @media (min-width: 768px ) {
-    display: none;
-  }
-
-  .social-mobile {
-    transition: ease 200ms;
-    margin: 2rem 0;
-
-    &:hover {
-      opacity: .7;
-      transition: ease 200ms;
-    }
-
-  }
-
-  .wrap-languag-footer {
-    @media (min-width: 768px) {
-      display: none;
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    span {
-      font-size: 14px;
-      color: $gray;
-      opacity: .5;
-      transition: ease 200ms;
-
-      &.active {
-        opacity: 1;
-        transition: ease 200ms;
-      }
-    }
-
-    label.vue-js-switch {
-      margin: 0 10px;
-    }
-
-    .vue-js-switch .v-switch-core .v-switch-button {
-      background-color: $yellow;
-      width: 11px !important;
-      height: 11px !important;
-    }
-
-    .vue-js-switch .v-switch-core {
-      border: 2px solid $gray;
-    }
+  @media (max-width: 768px ) {
+    padding: 30px 0 90px;
   }
 }
 

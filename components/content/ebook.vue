@@ -39,6 +39,14 @@ export default {
   padding-top: 150px;
   position: relative;
 
+  @media (max-width: 768px) {
+    margin-top: 120px;
+    height: 600px;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-top: 120px;
+  }
+
   .title {
     font-size: 48px;
     font-weight: 700;
@@ -46,6 +54,11 @@ export default {
     letter-spacing: -2px;
     color: $black;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -84,6 +97,8 @@ export default {
     bottom: 0;
     left: -78px;
 
+    @media (max-width: 768px) { display: none; }
+
     &::before {
       content: '';
       position: absolute;
@@ -103,6 +118,14 @@ export default {
     top: 0;
     right: 230px;
 
+    @media (max-width: 768px) {
+      width: 65px;
+      height: 130px;
+      top: -65px;
+      left: 0;
+      right: initial;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -111,6 +134,12 @@ export default {
       width: 156px;
       height: 78px;
       background: $primary;
+
+      @media (max-width: 768px) {
+        top: 65px;
+        width: 130px;
+        height: 65px;
+      }
     }
   }
 
@@ -121,6 +150,14 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @media (max-width: 768px) {
+      width: 65px;
+      height: 65px;
+      background: $yellow;
+      top: -65px;
+      left: 65px;
+    }
   }
 }
 </style>

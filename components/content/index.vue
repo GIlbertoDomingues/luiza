@@ -2,7 +2,8 @@
   <div>
     <l-about />
     <l-form />
-    <l-reason />
+    <l-reason v-if="!isMobile" />
+    <l-reason-mobile v-if="isMobile" />
     <l-ebook />
     <l-faq />
   </div>
@@ -14,6 +15,7 @@ export default {
     LAbout: () => import('@/components/content/about.vue'),
     LForm: () => import('@/components/content/form.vue'),
     LReason: () => import('@/components/content/reason.vue'),
+    LReasonMobile: () => import('@/components/content/reason-mobile.vue'),
     LEbook: () => import('@/components/content/ebook.vue'),
     LFaq: () => import('@/components/content/faq.vue')
   },

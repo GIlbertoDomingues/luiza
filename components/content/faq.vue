@@ -1,7 +1,7 @@
 <template>
   <div id="faq" class="container">
     <div class="row">
-      <h2 class="title-faq">
+      <h2 class="title-faq col">
         Perguntas frequentes
       </h2>
     </div>
@@ -186,6 +186,14 @@
   letter-spacing: -2px;
   margin-top: 195px;
   margin-bottom: 65px;
+
+  @media (max-width: 768px) {
+    font-size: 38px;
+    line-height: 1;
+    margin-top: 80px;
+    margin-bottom: 35px;
+  }
+
 }
 
 .card {
@@ -204,11 +212,12 @@
   border-bottom: none;
   font-size: 16px;
   font-weight: 700;
-  line-height: 3.19;
+  line-height: 1.25;
   color: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 80px;
 
   .icon-minus {
     display: block;
@@ -234,5 +243,9 @@
   line-height: 1.25;
   color: #8f8f8f;
   padding-right: 170px;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
 }
 </style>
