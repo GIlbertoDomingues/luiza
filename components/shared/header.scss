@@ -7,7 +7,7 @@ header {
 
 .wrapper-header {
   background: transparent;
-  position: fixed; //fixed
+  position: fixed;
   top: 0;
   z-index: 1010;
   left: 0;
@@ -57,16 +57,6 @@ header {
 
     .wrap-top-header-right {
       display: flex;
-
-      .social {
-        margin-left: 15px;
-        transition: ease 200ms;
-
-        &:hover {
-          opacity: .7;
-          transition: ease 200ms;
-        }
-      }
     }
 
     .wrap-language {
@@ -100,9 +90,47 @@ header {
         border: 2px solid $white;
       }
     }
+  }
+}
 
+.wrap-social-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.3rem;
+
+  .social img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.social {
+  margin-left: 15px;
+  transition: ease 200ms;
+  position: relative;
+
+  img {
+    height: 25px;
+    width: 25px;
   }
 
+  .icon-social-header-hover {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    opacity: 0;
+    transition: ease 200ms;
+  }
+
+  &:hover {
+    transition: ease 200ms;
+
+    .icon-social-header-hover {
+      opacity: 1;
+      transition: ease 200ms;
+    }
+  }
 }
 
 // Nav
@@ -272,11 +300,11 @@ header {
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
+
 .slide-fade-leave-active {
   transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active em versões anteriores a 2.1.8 */ {
+.slide-fade-enter, .slide-fade-leave-to {
   transform: translateX(-100%);
   opacity: 0;
 }

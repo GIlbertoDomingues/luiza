@@ -22,9 +22,11 @@
 
             <a target="_black" href="https://www.instagram.com/arbi.on/" class="social">
               <img :src="require('@/assets/images/instagram-header.svg')" alt="Instagram Airb-ON">
+              <img class="icon-social-header-hover" :src="require('@/assets/images/instagram-header-hover.svg')" alt="Instagram Airb-ON">
             </a>
             <a target="_black" href="https://www.linkedin.com/company/arbi-on/" class="social">
               <img :src="require('@/assets/images/linkedin-header.svg')" alt="Linkedin Airb-ON">
+              <img class="icon-social-header-hover" :src="require('@/assets/images/linkedin-header-hover.svg')" alt="Linkedin Airb-ON">
             </a>
           </div>
         </div>
@@ -70,27 +72,37 @@
 
       <transition v-if="isMobile" name="slide-fade">
         <scrollactive v-show="active_mobile" class="nav-mobile nav" :offset="65">
-          <a href="#inicio" class="scrollactive-item">
+          <a href="#inicio" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.home') }}
           </a>
-          <a href="#sobre" class="scrollactive-item">
+          <a href="#sobre" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.about') }}
           </a>
-          <a href="#formulario" class="scrollactive-item">
+          <a href="#formulario" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.form') }}
           </a>
-          <a href="#motivos" class="scrollactive-item">
+          <a href="#motivos" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.reason') }}
           </a>
-          <a href="#ebook" class="scrollactive-item">
+          <a href="#ebook" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.ebook') }}
           </a>
-          <a href="#faq" class="scrollactive-item">
+          <a href="#faq" class="scrollactive-item" @click.prevent="toggleNavMobile">
             {{ $t('links.faq') }}
           </a>
           <!-- <a href="#blog" class="scrollactive-item">
             {{ $t('links.blog') }}
           </a> -->
+          <div class="wrap-social-mobile">
+            <a target="_black" href="https://www.instagram.com/arbi.on/" class="social mobile">
+              <img :src="require('@/assets/images/instagram-header.svg')" alt="Instagram Airb-ON">
+              <img class="icon-social-header-hover" :src="require('@/assets/images/instagram-header-hover.svg')" alt="Instagram Airb-ON">
+            </a>
+            <a target="_black" href="https://www.linkedin.com/company/arbi-on/" class="social mobile">
+              <img :src="require('@/assets/images/linkedin-header.svg')" alt="Linkedin Airb-ON">
+              <img class="icon-social-header-hover" :src="require('@/assets/images/linkedin-header-hover.svg')" alt="Linkedin Airb-ON">
+            </a>
+          </div>
         </scrollactive>
       </transition>
     </div>

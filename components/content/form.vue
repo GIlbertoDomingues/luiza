@@ -17,10 +17,10 @@
           <h2 class="title" v-html="titleMobile" />
           <h5 class="subtitle" v-text="subtitle" />
         </div>
-        <b-form v-if="show" method="POST" action="https://formspree.io/mjvkvegq">
+        <b-form method="POST" action="https://formspree.io/mjvkvegq">
           <input type="hidden" name="_subject" value="Novo contato pelo site!">
           <input type="hidden" name="_language" value="pt">
-          <b-form-group label="Escolha a opção abaixo">
+          <b-form-group v-if="!isMobile" label="Escolha a opção abaixo">
             <b-form-radio-group
               id="btn-radios"
               v-model="selected"
@@ -30,59 +30,77 @@
             />
           </b-form-group>
 
-          <b-form-group id="input-group-name" label="Nome" label-for="name">
-            <b-form-input
-              id="name"
-              v-model="form.name"
-              required
-              name="Nome"
-              placeholder="Digite seu nome"
+          <label for="radioFake">Escolha a opção abaixo</label>
+          <b-button-group v-if="isMobile" class="wrap-button-mobile">
+            <b-button class="btn-secundary" @click.prevent="showForm">
+              <label>
+                Cadastrar conflito
+                <b-form-radio v-model="selectedMobile" buttons name="Cadastrar conflito" value="Cadastrar conflito" />
+              </label>
+            </b-button>
+            <b-button class="btn-secundary" @click.prevent="showForm">
+              <label>
+                Ser árbrito
+                <b-form-radio v-model="selectedMobile" buttons name="Ser árbrito" value="Ser árbrito" />
+              </label>
+            </b-button>
+          </b-button-group>
+
+          <div class="wrap-mobile-form" :class="{'show-form' : show}">
+            <b-form-group id="input-group-name" label="Nome" label-for="name">
+              <b-form-input
+                id="name"
+                v-model="form.name"
+                required
+                name="Nome"
+                placeholder="Digite seu nome"
+              />
+            </b-form-group>
+
+            <b-form-group id="input-group-email" label="Email" label-for="email">
+              <b-form-input
+                id="email"
+                v-model="form.email"
+                name="Email"
+                type="email"
+                required
+                placeholder="Digite seu email"
+              />
+            </b-form-group>
+
+            <b-form-group id="input-group-phone" label="Telefone celular" label-for="phone">
+              <b-form-input
+                id="phone"
+                v-model="form.phone"
+                name="Telefone"
+                type="text"
+                required
+                placeholder=" 00.00000.0000"
+              />
+            </b-form-group>
+
+            <b-form-group id="input-group-sms">
+              <b-form-checkbox-group id="checkboxes-sms" v-model="form.checked" name="Receber sms/e-mail">
+                <b-form-checkbox value="sim">
+                  Eu concordo em receber sms/e-mail
+                </b-form-checkbox>
+              </b-form-checkbox-group>
+            </b-form-group>
+
+            <b-form-textarea
+              id="textarea"
+              v-model="form.message"
+              name="Mensagem"
+              placeholder="Escreva-nos uma mensagem"
+              rows="2"
             />
-          </b-form-group>
 
-          <b-form-group id="input-group-email" label="Email" label-for="email">
-            <b-form-input
-              id="email"
-              v-model="form.email"
-              name="Email"
-              type="email"
-              required
-              placeholder="Digite seu email"
-            />
-          </b-form-group>
+            <b-button type="submit" variant="primary">
+              Enviar cadastro
+            </b-button>
 
-          <b-form-group id="input-group-phone" label="Telefone celular" label-for="phone">
-            <b-form-input
-              id="phone"
-              v-model="form.phone"
-              name="Telefone"
-              type="text"
-              required
-              placeholder=" 00.00000.0000"
-            />
-          </b-form-group>
-
-          <b-form-group id="input-group-sms">
-            <b-form-checkbox-group id="checkboxes-sms" v-model="form.checked" name="Receber sms/e-mail">
-              <b-form-checkbox value="sim">
-                Eu concordo em receber sms/e-mail
-              </b-form-checkbox>
-            </b-form-checkbox-group>
-          </b-form-group>
-
-          <b-form-textarea
-            id="textarea"
-            v-model="form.message"
-            name="Mensagem"
-            placeholder="Escreva-nos uma mensagem"
-            rows="2"
-          />
-
-          <b-button type="submit" variant="primary">
-            Enviar cadastro
-          </b-button>
-
-          <span class="text-help">Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.</span>
+            <span class="text-help">Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.</span>
+          </div>
         </b-form>
       </div>
     </div>
@@ -102,20 +120,37 @@ export default {
         phone: '',
         message: ''
       },
-      show: true,
-      selected: 'conflito',
+      show: false,
+      selected: 'Cadastrar conflito',
+      selectedMobile: '',
       options: [
         { text: 'Cadastrar conflito', value: 'Cadastrar conflito' },
         { text: 'Ser árbrito', value: 'Ser árbrito' }
-      ]
+      ],
+      isMobile: false,
+      window: {
+        width: 0
+      }
     }
   },
 
+  created () {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   methods: {
+
     onSubmit (evt) {
       evt.preventDefault()
       alert(JSON.stringify(this.form))
     },
+
     onReset (evt) {
       evt.preventDefault()
       // Reset our form values
@@ -127,8 +162,22 @@ export default {
       this.$nextTick(() => {
         this.show = true
       })
+    },
+
+    handleResize () {
+      this.window.width = window.innerWidth
+
+      if (this.window.width <= 768) {
+        this.isMobile = true
+      }
+    },
+
+    showForm () {
+      console.log('aaa')
+      this.show = true
     }
   }
+
 }
 </script>
 
@@ -240,7 +289,9 @@ export default {
     background-color: $light-grey;
 
     @media (max-width: 768px) {
-      min-height: 760px;
+      min-height: 260px;
+      height: auto;
+      padding-bottom: 1rem;
     }
 
     .wrap-title-mobile {
@@ -377,6 +428,53 @@ export default {
         margin: 15px 30px;
         display: flex;
       }
+    }
+  }
+
+  .wrap-mobile-form {
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &.show-form {
+      display: block;
+    }
+  }
+
+  .wrap-button-mobile {
+    width: 100%;
+
+    label {
+      margin: 0;
+    }
+
+    .btn-secondary {
+      height: 50px;
+      width: 50%;
+      border: solid 1px $border;
+      background-color: $white;
+      border-radius: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+
+      &.active {
+        border: solid 1px $primary;
+        background-color: $primary;
+        color: $white;
+        box-shadow: none;
+      }
+
+      .custom-control.custom-radio {
+        position: absolute;
+        opacity: 0;
+      }
+
     }
   }
 }

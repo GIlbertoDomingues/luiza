@@ -138,18 +138,6 @@ export default {
 
   }
 
-  .icon-social-footer-hover {
-    display: none;
-  }
-
-  // .icon-social-footer:hover {
-  //   display: none;
-  // }
-
-  // .icon-social-footer:hover .icon-social-footer-hover {
-  //   display: block;
-  // }
-
   a,
   p {
     font-size: 14px;
@@ -166,11 +154,24 @@ export default {
   .social {
     margin-right: 15px;
     transition: ease 200ms;
+    position: relative;
+    width: 35px;
+    height: 35px;
+
+    .icon-social-footer-hover {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transition: ease 200ms;
+    }
 
     &:hover {
-      opacity: .7;
-      transition: ease 200ms;
       text-decoration: none;
+
+      .icon-social-footer-hover {
+        opacity: 1;
+        transition: ease 200ms;
+      }
     }
 
     @media (max-width: 768px ) {

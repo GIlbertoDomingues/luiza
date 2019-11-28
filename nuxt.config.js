@@ -26,8 +26,8 @@ export default {
       { name: 'geo.placename', content: 'Curitiba/Paraná' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'apple-touch-icon', href: '/icon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/landing/favicon.png' },
+      { rel: 'apple-touch-icon', href: '/landing/icon.png' }
     ]
   },
   manifest: {
@@ -39,12 +39,12 @@ export default {
     description: 'Arbitragem online: rápido, seguro e acessível',
     icons: [
       {
-        'src': '/icon.png',
+        'src': '/landing/icon.png',
         'sizes': '500x500',
         'type': 'image/png'
       }
     ],
-    'splash_pages': '/splashscreens/splash.png'
+    'splash_pages': '/landing/splashscreens/splash.png'
   },
   loading: { color: '#e76243' },
   plugins: [
@@ -68,10 +68,11 @@ export default {
   ],
 
   router: {
-    middleware: 'i18n'
+    // middleware: 'i18n',
+    base: '/landing'
   },
 
   generate: {
-    routes: ['/', '/pt-br']
+    routes: ['/', '/pt-br', '/landing']
   }
 }
