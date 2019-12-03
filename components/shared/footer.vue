@@ -152,17 +152,20 @@ export default {
   }
 
   .social {
-    margin-right: 15px;
+    margin-right: 45px;
     transition: ease 200ms;
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
+
+    .icon-social-footer {
+      position: absolute;
+      top: 0;
+      transition: ease 200ms;
+    }
 
     .icon-social-footer-hover {
-      position: absolute;
-      left: 0;
       opacity: 0;
-      transition: ease 200ms;
     }
 
     &:hover {
@@ -177,6 +180,7 @@ export default {
     @media (max-width: 768px ) {
       margin-bottom: 50px;
       display: inline-block;
+      margin-right: 5px;
       transition: ease 200ms;
     }
   }
