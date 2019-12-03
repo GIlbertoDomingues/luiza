@@ -95,13 +95,19 @@ header {
 
 .wrap-social-mobile {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 1.3rem;
 
-  .social img {
-    height: 35px;
-    width: 35px;
+  .social {
+    margin-right: 5px;
+    transition: ease 200ms;
+    position: relative;
+    margin-left: 25px;
+
+    img {
+      height: 35px;
+      width: 35px;
+    }
   }
 }
 
@@ -233,7 +239,7 @@ header {
         outline: none;
 
         .nav-icon {
-          height: 26px;
+          height: 36px;
           transition: 150ms ease-out;
           transform: translateX(200px);
 
@@ -244,9 +250,9 @@ header {
         }
 
         .nav-close {
-          height: 26px;
+          height: 36px;
           transition: 250ms ease-out;
-          transform: translateX(-26px);
+          transform: translateX(-36px);
 
           &.out {
             transition: 150ms ease-out;
